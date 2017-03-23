@@ -3,13 +3,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './app-header.component.html',
-  styleUrls: ['./app-header.component.css']
+  styleUrls: ['./app-header.component.scss']
 })
 export class AppHeaderComponent implements OnInit {
 
-  text : string ='{{ Dani Castilho - Web Developer }}'
+  text : string ='{ Dani Castilho - Web Developer }'
   el : any = document.getElementsByClassName('app-header__title');
-
+  
   char : any ='';
   writer : any ='';
   next : any ='';
@@ -20,15 +20,13 @@ export class AppHeaderComponent implements OnInit {
     this.writer = setInterval(() => {
       if (!this.char.length) return clearInterval(this.writer);
       this.next = this.char.pop();
-      el.innerHTML += this.next;
-      // console.log(el.innerHTML += this.next)
-    }, 100)
+      el[0].innerHTML += '<span>' + this.next + '</span>';
+    }, 120)
   }
    
 
   ngOnInit() {
-    
-    
+     this.typeWriter(this.text, this.el)
   }
 
-}
+} 

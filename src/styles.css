@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+body,html{
+    margin: 0;
+    padding: 0;
+}
+    span {
+      position: relative;
+      line-height: 2.5em;
+      cursor: pointer;
+      top: 0;
+      -webkit-transition: all 0.3s ease-out;
+    }
+    span:hover {
+      /*-webkit-transition-delay: 0.1s;*/
+      top: -30px;
+      background: -webkit-linear-gradient(left, darkblue, purple);
+      background: -o-linear-gradient(right, darkblue, purple);
+      background: -moz-linear-gradient(right, darkblue, purple);
+      background: linear-gradient(to right, darkblue, purple);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
